@@ -1,4 +1,4 @@
-package com.example.materialtest;
+package com.eeepay.cn.zzq.demo.ui.materia_design.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.eeepay.cn.zzq.demo.ui.materia_design.FruitActivity;
+import com.eeepay.cn.zzq.demo.ui.materia_design.R;
+import com.eeepay.cn.zzq.demo.ui.materia_design.bean.Fruit;
 
 import java.util.List;
 

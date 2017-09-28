@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!-- values-v21 目录是只有android5.0以上的系统才会去读取；因此这么声明是没有问题的-->
     <style name="FruitActivityTheme" parent="AppTheme">
+        <!-- statusBarColor 属性是从21 才加入的 -->
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 

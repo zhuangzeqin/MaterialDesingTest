@@ -1,28 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/backup"
-        android:icon="@drawable/ic_backup"
-        android:title="backup"
-        app:showAsAction="always" /><!--always 表示永远显示在toolbar中 如果屏幕空间不够则不显示 -->
-    <item
-        android:id="@+id/delete"
-        android:icon="@drawable/ic_delete"
-        android:title="Delete"
-        app:showAsAction="ifRoom" /><!--ifRoom 表示屏幕空间足够的情况下；显示在Toolbar中；不够的话；就显示在菜单中 -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_call"
+            android:icon="@drawable/nav_call"
+            android:title="call" />
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/nav_friends"
+            android:title="Friends" />
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/nav_location"
+            android:title="Location" />
+        <item
+            android:id="@+id/nav_mail"
+            android:icon="@drawable/nav_mail"
+            android:title="Mail" />
+        <item
+            android:id="@+id/nav_task"
+            android:icon="@drawable/nav_task"
+            android:title="Tasks" />
+    </group>
+    <item android:title="Sub items">
+        <menu>
+            <item
+                android:checkable="true"
+                android:icon="@drawable/nav_mail"
+                android:title="Sub item 1" />
+            <item
+                android:checkable="true"
+                android:icon="@drawable/nav_mail"
+                android:title="Sub item 2" />
+        </menu>
+    </item>
+    <group
+        android:id="@+id/group_manage"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@mipmap/ic_launcher"
+            android:title="应用管理" />
+    </group>
 
-    <item
-        android:id="@+id/setting"
-        android:icon="@drawable/ic_settings"
-        android:title="11"
-        app:showAsAction="never"/>
-    <!--never 表示永远显示在菜单中 -->
-    <item
-        android:id="@+id/setting2"
-        android:icon="@drawable/ic_settings"
-        android:title="22"
-        app:showAsAction="never"/><!--never 表示永远显示在菜单中 -->
+    <group
+        android:id="@+id/group_settings"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_theme"
+            android:title="主题风格" />
+        <item
+            android:id="@+id/nav_night"
+            android:title="夜间模式" />
+        <item
+            android:id="@+id/nav_setting"
+            android:title="设置" />
+        <item
+            android:id="@+id/nav_suggestion"
+            android:title="意见反馈" />
+        <item
+            android:id="@+id/nav_about"
+            android:title="关于" />
 
+    </group>
 
 </menu>

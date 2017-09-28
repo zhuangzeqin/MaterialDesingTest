@@ -1,11 +1,10 @@
-package com.example.materialtest;
+package com.eeepay.cn.zzq.demo.ui.materia_design;
 
 import android.content.Intent;
-import android.graphics.Color;
+import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -26,15 +25,19 @@ public class FruitActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String fruitName = intent.getStringExtra(FRUIT_NAME);
         int fruitImageId = intent.getIntExtra(FRUIT_IMAGE_ID, 0);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        ImageView fruitImageView = (ImageView) findViewById(R.id.fruit_image_view);
-        TextView fruitContentText = (TextView) findViewById(R.id.fruit_content_text);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+        //可折叠的标题栏 CollapsingToolbarLayout 不能独立存在 作用于 AppBarLayoutd 直接子布局上使用；AppBarLayoutd 又必须是CoordinatorLayout 的子布局
+        CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        ImageView fruitImageView = (ImageView) findViewById(R.id.fruit_image_view);
+        TextView fruitContentText = (TextView) findViewById(R.id.fruit_content_text);
+
+
         collapsingToolbar.setTitle(fruitName);
         Glide.with(this).load(fruitImageId).into(fruitImageView);
         String fruitContent = generateFruitContent(fruitName);

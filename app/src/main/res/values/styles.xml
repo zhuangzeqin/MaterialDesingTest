@@ -9,6 +9,7 @@
     </style>
 
     <style name="FruitActivityTheme" parent="AppTheme">
+        <!-- 5.0 之前的系统是无法指定状态栏的颜色； 因此这里什么都不用设置-->
     </style>
 
 </resources>
