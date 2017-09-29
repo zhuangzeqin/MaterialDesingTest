@@ -22,6 +22,12 @@
             android:name=".FruitActivity"
             android:theme="@style/FruitActivityTheme">
         </activity>
+
+        <service android:name=".LongRunningService"
+            android:enabled="true"
+            android:exported="true">
+
+        </service>
     </application>
 
 </manifest>

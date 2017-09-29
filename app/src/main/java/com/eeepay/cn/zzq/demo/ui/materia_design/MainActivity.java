@@ -1,5 +1,6 @@
 package com.eeepay.cn.zzq.demo.ui.materia_design;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -84,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Toast.makeText(APP.getContext(), "Data restored", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(APP.getContext(),LongRunningService.class);
+                        startService(intent);
                     }
                 }).show();
 
