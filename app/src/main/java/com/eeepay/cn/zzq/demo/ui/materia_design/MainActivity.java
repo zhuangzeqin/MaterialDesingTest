@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view,"是否要删除",Snackbar.LENGTH_SHORT).setAction("Undo", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(MainActivity.this, "Data restored", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(APP.getContext(), "Data restored", Toast.LENGTH_SHORT).show();
                     }
                 }).show();
 
